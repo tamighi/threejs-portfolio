@@ -1,6 +1,8 @@
 import { BrowserRouter } from "react-router-dom";
 import { Contact, Hero, Navbar, StarCanvas } from "./components";
 
+import "./index.css";
+
 const App = () => {
   return (
     <BrowserRouter>
