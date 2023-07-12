@@ -11,7 +11,6 @@ const App = () => {
           <Navbar /> <Hero />
         </div>
       </div>
-      <div className="mx-auto inline-block">Test</div>
       <div className="relative z-0">
         <Contact />
         <StarCanvas />
