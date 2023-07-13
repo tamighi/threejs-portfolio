@@ -1,3 +1,5 @@
+import React from "react";
+
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import { Suspense } from "react";
@@ -5,6 +7,17 @@ import { CanvasLoader } from "..";
 
 const Computers = () => {
   const computer = useGLTF("./desktop_pc/scene.gltf");
+  const [isMobile, setIsMobile] = React.useState(false)
+
+  React.useEffect(() => {
+    const mediaQuery = window.matchMedia("(max-width: 700px)");
+    setIsMobile(mediaQuery.matches)
+    const handleMediaChange = (event: MediaQueryListEvent) => {
+      setIsMobile(event.matches)
+    }
+    mediaQuery.addEventListener("change", handleMediaChange);
+    return () => mediaQuery.removeEventListener("change", handleMediaChange)
+  }, [])
 
   return (
     <mesh>
@@ -20,7 +33,7 @@ const Computers = () => {
       />
       <primitive
         object={computer.scene}
-        scale={0.75}
+        scale={isMobile ? 0.7 : 0.75}
         position={[0, -3.25, -1.5]}
         rotation={[-0.01, -0.2, -0.1]}
       />
