@@ -8,3 +8,4 @@ export * from "./Tech";
 export * from "./Navbar";
 export * from "./Hero";
 export * from "./ComputerCanvas";
+export * from "./CanvasLoader";
