@@ -1,9 +1,7 @@
-import { motion } from "framer-motion";
-import { textVariant } from "../../utils/motion";
 import { styles } from "../../styles";
 import { testimonials } from "../../constants";
 import { FeedbackCard } from "./FeedbackCard";
-import { SectionWrapper } from "..";
+import { SectionHeader, SectionWrapper } from "..";
 
 const Feedbacks = () => {
   return (
@@ -12,10 +10,7 @@ const Feedbacks = () => {
         <div
           className={`${styles.padding} bg-tertiary rounded-2xl min-h-[300px]`}
         >
-          <motion.div variants={textVariant()}>
-            <p className={styles.sectionSubText}>What others say</p>
-            <h2 className={styles.sectionHeadText}>Testimonials</h2>
-          </motion.div>
+          <SectionHeader subText="What people say" headText="Testimonials" />
         </div>
         <div className={`${styles.paddingX} -mt-20 pb-14 flex flex-wrap gap-7`}>
           {testimonials.map((testimonial, index) => (

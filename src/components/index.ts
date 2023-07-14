@@ -10,3 +10,4 @@ export * from "./Hero";
 export * from "./CanvasLoader";
 export * from "./EarthCanvas";
 export * from "./SectionWrapper";
+export * from "./SectionHeader";

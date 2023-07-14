@@ -1,18 +1,13 @@
 import { motion } from "framer-motion";
-import { styles } from "../../styles";
-import { fadeIn, textVariant } from "../../utils/motion";
+import { fadeIn } from "../../utils/motion";
 import { services } from "../../constants";
 import { ServiceCard } from "./ServiceCard";
-import { SectionWrapper } from "..";
-
+import { SectionHeader, SectionWrapper } from "..";
 
 const About = () => {
   return (
     <SectionWrapper idName="about">
-      <motion.div variants={textVariant(0)}>
-        <p className={styles.sectionSubText}>Introduction</p>
-        <h2 className={styles.sectionHeadText}>Overview</h2>
-      </motion.div>
+      <SectionHeader subText="Introduction" headText="Overview" />
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
         className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
@@ -31,7 +26,14 @@ const About = () => {
       </motion.p>
       <div className="mt-20 flex flex-wrap gap-10">
         {services.map((service, index) => {
-          return <ServiceCard key={index} index={index} title={service.title} icon={service.icon} />;
+          return (
+            <ServiceCard
+              key={index}
+              index={index}
+              title={service.title}
+              icon={service.icon}
+            />
+          );
         })}
       </div>
     </SectionWrapper>
