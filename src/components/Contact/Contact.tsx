@@ -1,4 +1,5 @@
 import React from "react";
+import emailjs from "@emailjs/browser";
 import { SectionWrapper } from "../../hoc";
 import { motion } from "framer-motion";
 import { slideIn } from "../../utils/motion";
@@ -12,9 +13,32 @@ const Contact = () => {
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {};
+  ) => {
+    const { name, value } = e.target;
+    setForm((prev) => ({ ...prev, [name]: value }));
+  };
 
-  const handleSubmit = (e: React.FormEvent) => {};
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    setLoading(true);
+    emailjs.send("service_yk850xe", "template_fyggjsd", {
+      from_name: form.name,
+      to_name: "Thomas",
+      reply_to: form.email,
+      to_email: "amighithomas@gmail.com",
+      message: form.message,
+    },
+    "cbf4-DN-h3V2IcMYN"
+    ).then(() => {
+        setLoading(false);
+        alert("Message sent !")
+        setForm({name: "", email: "", message: ""})
+      }, (error) => {
+        setLoading(false);
+        console.log(error)
+        alert("Something went wrong ...")
+      });
+  };
 
   return (
     <div className="xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden">
