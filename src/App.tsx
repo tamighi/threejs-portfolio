@@ -7,6 +7,7 @@ import {
   Navbar,
   StarCanvas,
   Tech,
+  Works,
 } from "./components";
 
 import "./index.css";
@@ -21,6 +22,7 @@ const App = () => {
         <About />
         <Experience />
         <Tech />
+        <Works />
       </div>
       <div className="relative z-0">
         <Contact />
