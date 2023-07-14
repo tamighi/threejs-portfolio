@@ -9,3 +9,4 @@ export * from "./Navbar";
 export * from "./Hero";
 export * from "./CanvasLoader";
 export * from "./EarthCanvas";
+export * from "./SectionWrapper";

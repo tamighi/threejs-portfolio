@@ -1,13 +1,13 @@
 import { motion } from "framer-motion";
-import { SectionWrapper } from "../../hoc";
 import { styles } from "../../styles";
 import { fadeIn, textVariant } from "../../utils/motion";
 import { projects } from "../../constants";
 import { ProjectCard } from "./ProjectCard";
+import { SectionWrapper } from "..";
 
 const Works = () => {
   return (
-    <>
+    <SectionWrapper idName="work">
       <motion.div variants={textVariant()}>
         <p className={styles.sectionSubText}>My works</p>
         <h2 className={styles.sectionHeadText}>Projects</h2>
@@ -32,11 +32,11 @@ const Works = () => {
       </div>
       <div className="mt-20 flex flex-wrap gap-7">
         {projects.map((project, index) => (
-          <ProjectCard key={index} project={project} index={index}/>
+          <ProjectCard key={index} project={project} index={index} />
         ))}
       </div>
-    </>
+    </SectionWrapper>
   );
 };
 
-export default SectionWrapper(Works, "work");
+export default Works;

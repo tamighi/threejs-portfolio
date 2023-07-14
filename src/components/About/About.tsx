@@ -3,12 +3,12 @@ import { styles } from "../../styles";
 import { fadeIn, textVariant } from "../../utils/motion";
 import { services } from "../../constants";
 import { ServiceCard } from "./ServiceCard";
-import { SectionWrapper } from "../../hoc";
+import { SectionWrapper } from "..";
 
 
 const About = () => {
   return (
-    <>
+    <SectionWrapper idName="about">
       <motion.div variants={textVariant(0)}>
         <p className={styles.sectionSubText}>Introduction</p>
         <h2 className={styles.sectionHeadText}>Overview</h2>
@@ -34,8 +34,8 @@ const About = () => {
           return <ServiceCard key={index} index={index} title={service.title} icon={service.icon} />;
         })}
       </div>
-    </>
+    </SectionWrapper>
   );
 };
 
-export default SectionWrapper(About, "about");
+export default About;
