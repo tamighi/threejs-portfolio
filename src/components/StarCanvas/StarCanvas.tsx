@@ -6,7 +6,7 @@ import { random } from "maath";
 
 const Stars = () => {
   const ref = React.useRef<any>(null);
-  const sphere = random.inSphere(new Float32Array(6000), {
+  const sphere = random.inSphere(new Float32Array(5001), {
     radius: 1.2,
   }) as Float32Array;
 
