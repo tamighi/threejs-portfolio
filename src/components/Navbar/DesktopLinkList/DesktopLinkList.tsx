@@ -9,7 +9,7 @@ const DesktopLinkList = (props: Props) => {
       {navLinks.map((link) => (
         <li
           key={link.id}
-          className="text-secondary hover:text-white text-[18px] font-medium cursor-pointer"
+          className="text-secondary hover:text-white text-[18px] font-medium"
         >
           <a href={`#${link.id}`}>{link.title}</a>
         </li>

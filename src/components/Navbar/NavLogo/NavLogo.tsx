@@ -5,15 +5,15 @@ const NavLogo = () => {
   return (
     <Link
       to="/"
-      className="flex items-center gap-2"
+      className="flex items-center gap-4"
       onClick={() => {
         window.scrollTo(0, 0);
       }}
     >
       <img src={logo} alt="logo" className="w-9 h-9" />
-      <p className="text-white text-[18px] font-bold cursor-pointer flex">
+      <span className="text-white text-[18px] font-bold">
         Thomas Amighi
-      </p>
+      </span>
     </Link>
   );
 };
