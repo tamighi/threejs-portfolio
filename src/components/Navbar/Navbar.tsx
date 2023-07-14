@@ -3,14 +3,28 @@ import { Link } from "react-router-dom";
 
 import { styles } from "../../styles";
 import { logo, menu, close } from "../../assets";
-import { navLinks } from "../../constants";
+
+export const navLinks = [
+  {
+    id: "about",
+    title: "About",
+  },
+  {
+    id: "work",
+    title: "Work",
+  },
+  {
+    id: "contact",
+    title: "Contact",
+  },
+];
 
 const Navbar = () => {
   const [active, setActive] = React.useState("");
   const [toggle, setToggle] = React.useState(false);
   return (
     <nav
-      className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 bg-primary`}
+      className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-50 bg-primary`}
     >
       <div className="flex-grow flex justify-between items-center max-w-7xl mx-auto">
         <Link
@@ -23,7 +37,8 @@ const Navbar = () => {
         >
           <img src={logo} alt="logo" className="w-9 h-9" />
           <p className="text-white text-[18px] font-bold cursor-pointer flex">
-            Amighi <span className="sm:block hidden">&nbsp;| Typescript Master</span>
+            Amighi{" "}
+            <span className="sm:block hidden">&nbsp;| Typescript Master</span>
           </p>
         </Link>
         <ul className="list-none sm:flex hidden flex-row gap-10">
