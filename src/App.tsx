@@ -3,7 +3,6 @@ import {
   About,
   Contact,
   Experience,
-  Feedbacks,
   Hero,
   Navbar,
   StarCanvas,
@@ -17,13 +16,12 @@ const App = () => {
   return (
     <BrowserRouter>
       <Navbar />
-      <div className="flex flex-col">
+      <div className="flex flex-col gap-16">
         <Hero />
         <About />
         <Experience />
         <Tech />
         <Works />
-        <Feedbacks />
       </div>
       <div className="relative z-0">
         <Contact />
