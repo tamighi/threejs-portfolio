@@ -1,6 +1,6 @@
 import React from "react";
 
-import emailjs from "@emailjs/browser";
+import { email } from "../../../services";
 
 const ContactForm = () => {
   const formRef = React.useRef(null);
@@ -18,19 +18,8 @@ const ContactForm = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    emailjs
-      .send(
-        "service_yk850xe",
-        "template_fyggjsd",
-        {
-          from_name: form.name,
-          to_name: "Thomas",
-          reply_to: form.email,
-          to_email: "amighithomas@gmail.com",
-          message: form.message,
-        },
-        "cbf4-DN-h3V2IcMYN"
-      )
+    email
+      .send({ name: form.name, email: form.email, message: form.message })
       .then(
         () => {
           setLoading(false);
