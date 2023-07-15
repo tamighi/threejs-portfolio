@@ -12,7 +12,7 @@ const ExperienceCard = (props: Props) => {
       contentStyle={{ background: "#1d1836", color: "#fff" }}
       contentArrowStyle={{ borderRight: "7px solid #232631" }}
       date={experience.date}
-      iconStyle={{ background: experience.iconBg }}
+      iconStyle={{ background: "#E6DEDD" }}
       icon={
         <div className="h-full flex justify-center items-center">
           <img
@@ -29,16 +29,7 @@ const ExperienceCard = (props: Props) => {
           {experience.company_name}
         </p>
       </div>
-      <ul className="mt-5 list-disc ml-5 space-y-2">
-        {experience.points.map((point, index) => (
-          <li
-            key={index}
-            className="text-white-100 text-[14px] pl-1 tracking-wider"
-          >
-            {point}
-          </li>
-        ))}
-      </ul>
+      <p className="tracking-wider text-white-100">{experience.description}</p>
     </VerticalTimelineElement>
   );
 };

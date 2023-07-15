@@ -9,9 +9,9 @@ import {
   nodejs,
   git,
   docker,
-  starbucks,
-  tesla,
-  shopify,
+  selftaught,
+  fortytwo,
+  ulb,
   carrent,
   tripguide,
 } from "../assets";
@@ -38,41 +38,35 @@ const services = [
 
 const experiences = [
   {
-    title: "Neuropsychology master",
-    company_name: "ULB",
-    icon: starbucks,
-    iconBg: "#383E56",
-    date: "Sep 2015 - June 2021",
-    points: [
-      "Master’s degree in neuropsychology. Please see my full resume for more details !",
-    ],
+    title: "Self learning journey",
+    company_name: "Self taught",
+    icon: selftaught,
+    date: "Sep 2022 - Now",
+    description:
+      "I took this time to learn different topics, especially web development." +
+      "I built a full-stack website from scratch using NestJS and React. I also created my own UI library and developed core utilities such as complex hooks and a REST API.",
   },
   {
     title: "Software developer",
     company_name: "School 19",
-    icon: tesla,
-    iconBg: "#E6DEDD",
+    icon: fortytwo,
     date: "July 2021 - Sep 2022",
-    points: [
+    description:
       "Deep dive into software development. The school 19 (42 network) offers an original way of teaching in the form of projects implementation and peer to peer evaluation.",
-    ],
   },
   {
-    title: "Self learning journey",
-    company_name: "",
-    icon: shopify,
-    iconBg: "#383E56",
-    date: "Sep 2022 - Now",
-    points: [
-      "I took this time to learn different topics, especially web development",
-      "I built a full-stack website from scratch using NestJS and React. I also created my own UI library and developed core utilities such as complex hooks and a REST API.",
-    ],
+    title: "Neuropsychology master",
+    company_name: "ULB",
+    icon: ulb,
+    date: "Sep 2015 - June 2021",
+    description:
+      "Master’s degree in neuropsychology. Courses in neuropsychology, neurology and research in the field along with internships and a thesis.",
   },
 ];
 
 const technologies = [
   {
-    name: "CSS 3",
+    name: "CSS3",
     icon: css,
   },
   {
@@ -80,27 +74,26 @@ const technologies = [
     icon: typescript,
   },
   {
-    name: "React JS",
+    name: "ReactJS",
     icon: reactjs,
   },
   {
-    name: "Tailwind CSS",
+    name: "Tailwind",
     icon: tailwind,
   },
   {
-    name: "Node JS",
+    name: "NodeJS",
     icon: nodejs,
   },
   {
-    name: "git",
+    name: "Git",
     icon: git,
   },
   {
-    name: "docker",
+    name: "Docker",
     icon: docker,
   },
 ];
-
 
 const projects = [
   {

@@ -14,9 +14,9 @@ import reactjs from "./tech/reactjs.png";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 
-import shopify from "./company/shopify.png";
-import starbucks from "./company/starbucks.png";
-import tesla from "./company/tesla.png";
+import ulb from "./company/ulb.jpg";
+import fortytwo from "./company/42.png";
+import selftaught from "./company/self-taught.png";
 
 import carrent from "./carrent.png";
 import tripguide from "./tripguide.png";
@@ -36,9 +36,9 @@ export {
   reactjs,
   tailwind,
   typescript,
-  shopify,
-  starbucks,
-  tesla,
+  ulb,
+  selftaught,
+  fortytwo,
   carrent,
   tripguide,
 };
