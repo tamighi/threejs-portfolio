@@ -9,8 +9,8 @@ type EmailProps = {
 const email = {
   send: async ({ name, email, message }: EmailProps) => {
     return emailjs.send(
-      "service_yk850xe",
-      "template_fyggjsd",
+      import.meta.env.VITE_EMAIL_SERVICE,
+      import.meta.env.VITE_EMAIL_TEMPLATE,
       {
         from_name: name,
         to_name: "Thomas",
@@ -18,7 +18,7 @@ const email = {
         to_email: "amighithomas@gmail.com",
         message: message,
       },
-      "cbf4-DN-h3V2IcMYN"
+      import.meta.env.VITE_EMAIL_PUBLIC_KEY
     );
   },
 };
