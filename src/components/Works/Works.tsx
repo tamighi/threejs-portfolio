@@ -7,11 +7,11 @@ import { SectionHeader, SectionWrapper } from "..";
 const Works = () => {
   return (
     <SectionWrapper idName="work">
-      <SectionHeader subText="My works" headText="Projects"/>
+      <SectionHeader subText="My works" headText="Projects" />
       <div className="w-full flex">
         <motion.p
           variants={fadeIn("", "", 0.1, 1)}
-          className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]"
+          className="mt-3 text-secondary text-[17px] max-w-5xl leading-[30px]"
         >
           Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit
           enim labore culpa sint ad nisi Lorem pariatur mollit ex esse
