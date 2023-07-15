@@ -4,49 +4,18 @@ import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Suspense } from "react";
 import { CanvasLoader } from "../..";
-
-const duration = 8000;
-
-const smoothStep = (x: number) => {
-  return x * x * (3 - 2 * x);
-};
+import { useRotationEasing } from "../../../hooks";
 
 const Computers = () => {
   const computer = useGLTF("./desktop_pc/scene.gltf");
   const computerRef = React.useRef<any>(null);
-  const [direction, setDirection] = React.useState<"right" | "left">("left");
-  const [transitionProgress, setTransitionProgress] = React.useState(0);
+  const { rotationSpeed } = useRotationEasing({duration: 8000, rotation: 0.002});
 
   useFrame(() => {
     if (computerRef.current) {
-      const rotation = 0.002;
-      const speed = Math.abs(Math.abs(transitionProgress - 1) - 1);
-      const easing = smoothStep(speed);
-      const rotationSpeed = rotation * easing;
-      if (direction === "right") {
-        computerRef.current.rotation.y += rotationSpeed;
-      } else {
-        computerRef.current.rotation.y -= rotationSpeed;
-      }
+      computerRef.current.rotation.y += rotationSpeed;
     }
   });
-
-  React.useEffect(() => {
-    const transitionInterval = setInterval(() => {
-      setTransitionProgress((prevProgress) => prevProgress + 0.02);
-    }, duration / 100);
-    return () => clearInterval(transitionInterval);
-  }, []);
-
-  React.useEffect(() => {
-    const directionInterval = setInterval(() => {
-      setDirection((prevDirection) =>
-        prevDirection === "right" ? "left" : "right"
-      );
-      setTransitionProgress(0);
-    }, duration);
-    return () => clearInterval(directionInterval);
-  }, []);
 
   const [isMobile, setIsMobile] = React.useState(false);
 
@@ -76,7 +45,7 @@ const Computers = () => {
         object={computer.scene}
         scale={isMobile ? 0.65 : 0.8}
         position={[0, -0.5, -1.5]}
-        rotation={[-0.01, 0, -0.05]}
+        rotation={[-0.01, -1, -0.05]}
         ref={computerRef}
       />
     </mesh>
