@@ -12,8 +12,8 @@ import {
   selftaught,
   fortytwo,
   ulb,
-  carrent,
-  tripguide,
+  cub3d,
+  correctionWebsite,
 } from "../assets";
 
 const introduction =
@@ -114,7 +114,7 @@ const projects = [
         color: "green-text-gradient",
       },
     ],
-    image: carrent,
+    image: correctionWebsite,
     source_code_link: "https://github.com/",
   },
   {
@@ -131,7 +131,7 @@ const projects = [
         color: "green-text-gradient",
       },
     ],
-    image: tripguide,
+    image: cub3d,
     source_code_link: "https://github.com/",
   },
 ];

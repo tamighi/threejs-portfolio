@@ -14,19 +14,19 @@ const ProjectCard = (props: Props) => {
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
       <Tilt className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full">
-        <div className="relative w-full h-[230px]">
+        <div className="relative w-full h-full mb-10">
           <img
             src={project.image}
             alt={project.name}
             className="w-full h-full rounded-2xl"
           />
           <div className="absolute flex justify-end inset-0 m-3 card-img_hover">
-            <div
-              onClick={() => window.open(project.source_code_link, "_blank")}
-              className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
+            <a
+              className="black-gradient justify-center items-center flex w-10 h-10 rounded-full card-img_hover"
+              href={project.source_code_link}
             >
               <img src={github} alt="github" className="w-1/2 h-1/2" />
-            </div>
+            </a>
           </div>
         </div>
         <div className="mt-5">

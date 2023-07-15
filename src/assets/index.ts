@@ -18,8 +18,8 @@ import ulb from "./company/ulb.jpg";
 import fortytwo from "./company/42.png";
 import selftaught from "./company/self-taught.png";
 
-import carrent from "./carrent.png";
-import tripguide from "./tripguide.png";
+import cub3d from "./cub3dexample.png";
+import correctionWebsite from "./correctionwebsite.png";
 
 export {
   logo,
@@ -39,6 +39,6 @@ export {
   ulb,
   selftaught,
   fortytwo,
-  carrent,
-  tripguide,
+  cub3d,
+  correctionWebsite,
 };
