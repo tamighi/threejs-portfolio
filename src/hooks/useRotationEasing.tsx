@@ -17,13 +17,13 @@ const useRotationEasing = ({ duration, rotation }: Props) => {
 
   React.useEffect(() => {
     const transitionInterval = setInterval(() => {
-      setTransitionProgress((prevProgress) => prevProgress + 0.02);
+      setTransitionProgress((prevProgress) => prevProgress + 0.1);
 
       const speed = Math.abs(Math.abs(transitionProgress - 1) - 1);
 
       const easing = smoothStep(speed);
       setRotationSpeed((rotation * easing) * direction);
-    }, duration / 100);
+    }, duration / 20);
     return () => clearInterval(transitionInterval);
   }, [direction, transitionProgress]);
 
