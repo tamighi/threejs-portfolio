@@ -3,8 +3,7 @@ import React from "react";
 import { email } from "../../../services";
 
 const ContactForm = () => {
-  const formRef = React.useRef(null);
-
+  const [loading, setLoading] = React.useState(false);
   const [form, setForm] = React.useState({ name: "", email: "", message: "" });
 
   const handleChange = (
@@ -13,7 +12,6 @@ const ContactForm = () => {
     const { name, value } = e.target;
     setForm((prev) => ({ ...prev, [name]: value }));
   };
-  const [loading, setLoading] = React.useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -34,11 +32,7 @@ const ContactForm = () => {
       );
   };
   return (
-    <form
-      ref={formRef}
-      onSubmit={handleSubmit}
-      className="mt-12 flex flex-col gap-8"
-    >
+    <form onSubmit={handleSubmit} className="mt-12 flex flex-col gap-8">
       <label className="flex flex-col">
         <span className="text-white font-medium mb-4">Name</span>
         <input
@@ -78,6 +72,7 @@ const ContactForm = () => {
       <button
         type="submit"
         className="bg-tertiary w-fit outline-none shadow-md text-white py-3 px-8 font-bold shadow-primary rounded-xl"
+        disabled={loading}
       >
         {loading ? "Sending..." : "Send"}
       </button>
