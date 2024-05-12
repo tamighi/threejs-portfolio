@@ -14,12 +14,7 @@ import {
   ulb,
   cub3d,
   correctionWebsite,
-} from "../assets";
-
-const introduction =
-  "I'm a Neuropsychology master's graduate turned passionate developer.\n\n" +
-  "My journey led me to School 19 (42 network), renowned for its unique teaching program that emphasizes engaging projects and a self-directed learning model.\n\n" +
-  "I've since developped my web programing skills through different projects and I am actively looking for opportunities as a web developer.";
+} from "@/assets";
 
 const services = [
   {
@@ -136,4 +131,4 @@ const projects = [
   },
 ];
 
-export { services, technologies, experiences, projects, introduction };
+export { services, technologies, experiences, projects };
