@@ -3,7 +3,7 @@ import {
   threejsPortfolio,
   cub3d,
   todocal,
-} from "../projects";
+} from "../images/projects";
 
 type Media = {
   src: string;
