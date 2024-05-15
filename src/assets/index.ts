@@ -7,3 +7,4 @@ export { default as software } from "./software.png";
 export { default as web } from "./web.png";
 
 export * from "./shared";
+export * from "./skills";

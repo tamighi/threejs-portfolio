@@ -2,13 +2,6 @@ import {
   software,
   backend,
   web,
-  typescript,
-  css,
-  reactjs,
-  tailwind,
-  nodejs,
-  git,
-  docker,
   selftaught,
   fortytwo,
   ulb,
@@ -59,37 +52,6 @@ const experiences = [
   },
 ];
 
-const technologies = [
-  {
-    name: "CSS3",
-    icon: css,
-  },
-  {
-    name: "TypeScript",
-    icon: typescript,
-  },
-  {
-    name: "ReactJS",
-    icon: reactjs,
-  },
-  {
-    name: "Tailwind",
-    icon: tailwind,
-  },
-  {
-    name: "NodeJS",
-    icon: nodejs,
-  },
-  {
-    name: "Git",
-    icon: git,
-  },
-  {
-    name: "Docker",
-    icon: docker,
-  },
-];
-
 const projects = [
   {
     name: "Correction services website",
@@ -131,4 +93,4 @@ const projects = [
   },
 ];
 
-export { services, technologies, experiences, projects };
+export { services, experiences, projects };
