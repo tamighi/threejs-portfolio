@@ -8,4 +8,5 @@ export { default as web } from "./web.png";
 export { default as external } from "./external.png";
 
 export * from "./skills";
+export * from "./services";
 export * from "./projects";

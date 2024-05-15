@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 
 import { about } from "@/assets/shared";
-import { services } from "@/constants";
+import { services } from "@/assets";
 
 import { fadeIn } from "../../utils/motion";
 import { ServiceCard } from "./ServiceCard";

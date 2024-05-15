@@ -1,6 +1,6 @@
 import { software, backend, web } from "@/assets";
 
-const services = [
+export const services = [
   {
     title: "Web Developer",
     icon: web,
@@ -14,5 +14,3 @@ const services = [
     icon: software,
   },
 ];
-
-export { services };
