@@ -9,17 +9,23 @@ type Media = {
   src: string;
 };
 
+type Tag = {
+  name: string;
+  color: string;
+};
+
 type Projects = {
   [K: string]: {
     name: string;
     description: string;
-    demoLink?: string;
-    githubLink?: string;
-    medias: Media[];
+    demoLink: string | null;
+    githubLink: string;
+    medias: Readonly<Media[]>;
+    tags: Readonly<Tag[]>;
   };
 };
 
-export const projects: Projects = {
+export const projects = {
   todocal: {
     name: "Todocal",
     description: `Todocal is a mobile application developed using Expo and React Native. 
@@ -28,9 +34,20 @@ It uses SQLite for data storage, while React Query enables optimistic and undoab
 The app implements drag-and-drop functionality for task organization and ordering, and includes a tag system for categorization.
 It also features filtering, searching and task reusability.`,
     githubLink: "https://github.com/tamighi/todocal",
+    demoLink: null,
     medias: [
       {
         src: todocal,
+      },
+    ],
+    tags: [
+      {
+        name: "react-native",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "design",
+        color: "pink-text-gradient",
       },
     ],
   },
@@ -46,6 +63,20 @@ The backend implements authentication, a PostgreSQL database, aswell as a file s
         src: correctionWebsite,
       },
     ],
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "nestjs",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "docker",
+        color: "green-text-gradient",
+      },
+    ],
   },
   threejsPortfolio: {
     name: "Threejs Portfolio",
@@ -55,6 +86,7 @@ This project is based on a YouTube tutorial and has been further improved. It us
     githubLink: "https://github.com/tamighi/threejs-portfolio",
     demoLink: "https://tamighi.github.io/threejs-portfolio",
     medias: [{ src: threejsPortfolio }],
+    tags: [],
   },
   cub3d: {
     name: "cub3d",
@@ -62,11 +94,22 @@ This project is based on a YouTube tutorial and has been further improved. It us
 
 It is written entirely in C and uses a simple rendering engine called MiniLibX. The project includes features such as rendering, simple enemy AI, a game loop, and game state handling.`,
     githubLink: "https://github.com/Lysique/cub3d",
+    demoLink: null,
     medias: [{ src: cub3d }],
+    tags: [
+      {
+        name: "C",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "rendering",
+        color: "green-text-gradient",
+      },
+    ],
   },
-};
+} satisfies Projects;
 
 export const projectsArray = Object.entries(projects).map(([id, project]) => ({
-  id,
+  id: id as keyof typeof projects,
   ...project,
 }));

@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-import { about } from "@/assets";
+import { about } from "@/assets/shared";
 import { services } from "@/constants";
 
 import { fadeIn } from "../../utils/motion";

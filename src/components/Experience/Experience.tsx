@@ -1,7 +1,7 @@
 import { VerticalTimeline } from "react-vertical-timeline-component";
 import { ExperienceCard } from "./ExperienceCard";
 import { SectionHeader, SectionWrapper } from "..";
-import { experiencesArray } from "@/assets";
+import { experiencesArray } from "@/assets/shared";
 
 import "react-vertical-timeline-component/style.min.css";
 

@@ -1,8 +1,9 @@
 import Tilt from "react-parallax-tilt";
 import { motion } from "framer-motion";
-import { projects } from "../../../constants";
+
 import { fadeIn } from "../../../utils/motion";
-import { github } from "../../../assets";
+import { github } from "@/assets/shared";
+import { external, projects } from "@/assets";
 
 type Props = {
   project: typeof projects extends (infer U)[] ? U : never;
@@ -16,22 +17,32 @@ const ProjectCard = (props: Props) => {
       <Tilt className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full">
         <div className="relative w-full h-full mb-10">
           <img
-            src={project.image}
+            src={project.medias[0].src}
             alt={project.name}
-            className="w-full h-full rounded-2xl"
+            className="max-h-80 rounded-2xl"
           />
-          <div className="absolute flex justify-end inset-0 m-3 card-img_hover">
+          <div className="absolute flex justify-end inset-0 m-3 card-img_hover gap-2">
             <a
               className="black-gradient justify-center items-center flex w-10 h-10 rounded-full card-img_hover"
-              href={project.source_code_link}
+              href={project.githubLink}
+              target="_blank"
             >
               <img src={github} alt="github" className="w-1/2 h-1/2" />
             </a>
+            {project.demoLink && (
+              <a
+                className="black-gradient justify-center items-center flex w-10 h-10 rounded-full card-img_hover"
+                href={project.demoLink}
+                target="_blank"
+              >
+                <img src={external} alt="demo" className="w-1/2 h-1/2" />
+              </a>
+            )}
           </div>
         </div>
         <div className="mt-5">
           <h3 className="text-white font-bold text-[24px]">{project.name}</h3>
-          <p className="mt-2 text-secondary text-[14px]">
+          <p className="mt-2 text-secondary text-[14px] whitespace-break-spaces">
             {project.description}
           </p>
         </div>

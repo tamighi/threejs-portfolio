@@ -1,4 +1,4 @@
-import { experiencesArray } from "@/assets";
+import { experiencesArray } from "@/assets/shared";
 import { VerticalTimelineElement } from "react-vertical-timeline-component";
 
 type Props = {

@@ -5,6 +5,7 @@ export { default as herobg } from "./herobg.png";
 export { default as backend } from "./backend.png";
 export { default as software } from "./software.png";
 export { default as web } from "./web.png";
+export { default as external } from "./external.png";
 
-export * from "./shared";
 export * from "./skills";
+export * from "./projects";
