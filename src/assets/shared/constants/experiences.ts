@@ -1,3 +1,5 @@
+import { european_union, fortytwo, selftaught } from "../images";
+
 type Experiences = {
   [K: string]: {
     title: string;
@@ -13,6 +15,7 @@ const experiences: Experiences = {
     title: "Full stack developper",
     period: "Sep 2023 - Today",
     companyName: "European Comission",
+    icon: european_union,
     description: `Employed as an IT consultant within the Legal Service Department at the European Commission. 
 
 In charge of the maintenance and migration of various Angular and Symfony applications. 
@@ -24,6 +27,7 @@ Implementation a reusable "quality code" package to enforce linting, formatting,
     title: "Self learning journey",
     period: "Sep 2022 - August 2023",
     companyName: "Self taught",
+    icon: selftaught,
     description: `I took this time to learn different topics, especially web development.
 
 I built a full-stack website from scratch using NestJS and React. I also created my own UI library used in this project with core utilities such as theming and form handling.`,
@@ -32,6 +36,7 @@ I built a full-stack website from scratch using NestJS and React. I also created
     title: "Software developer",
     companyName: "School 19",
     period: "July 2021 - Sep 2022",
+    icon: fortytwo,
     description: `Deep dive into software development. The school 19 (42 network) offers an original way of teaching in the form of projects implementation and peer to peer evaluation.`,
   },
 };

@@ -1,7 +1,7 @@
 import { VerticalTimeline } from "react-vertical-timeline-component";
-import { experiences } from "../../constants";
 import { ExperienceCard } from "./ExperienceCard";
 import { SectionHeader, SectionWrapper } from "..";
+import { experiencesArray } from "@/assets";
 
 import "react-vertical-timeline-component/style.min.css";
 
@@ -11,7 +11,7 @@ const Experience = () => {
       <SectionHeader subText="What I have done so far" headText="Education" />
       <div className="mt-20 flex flex-col">
         <VerticalTimeline>
-          {experiences.map((experience, index) => (
+          {experiencesArray.map((experience, index) => (
             <ExperienceCard key={index} experience={experience} />
           ))}
         </VerticalTimeline>
