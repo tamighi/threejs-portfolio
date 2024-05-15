@@ -1,6 +1,6 @@
-import { projects } from "../../constants";
 import { ProjectCard } from "./ProjectCard";
 import { SectionHeader, SectionWrapper } from "..";
+import { projects } from "@/assets";
 
 const Works = () => {
   return (

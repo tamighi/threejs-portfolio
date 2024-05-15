@@ -1,44 +1,12 @@
-import logo from "./logo.svg";
-import backend from "./backend.png";
-import software from "./software.png";
-import web from "./web.png";
-import github from "./github.png";
-import menu from "./menu.svg";
-import close from "./close.svg";
+export { default as close } from "./close.svg";
+export { default as logo } from "./logo.svg";
+export { default as menu } from "./menu.svg";
+export { default as herobg } from "./herobg.png";
+export { default as backend } from "./backend.png";
+export { default as software } from "./software.png";
+export { default as web } from "./web.png";
+export { default as external } from "./external.png";
 
-import css from "./tech/css.png";
-import docker from "./tech/docker.png";
-import git from "./tech/git.png";
-import nodejs from "./tech/nodejs.png";
-import reactjs from "./tech/reactjs.png";
-import tailwind from "./tech/tailwind.png";
-import typescript from "./tech/typescript.png";
-
-import ulb from "./company/ulb.jpg";
-import fortytwo from "./company/42.png";
-import selftaught from "./company/self-taught.png";
-
-import cub3d from "./cub3dexample.png";
-import correctionWebsite from "./correctionwebsite.png";
-
-export {
-  logo,
-  backend,
-  software,
-  web,
-  github,
-  menu,
-  close,
-  css,
-  docker,
-  git,
-  nodejs,
-  reactjs,
-  tailwind,
-  typescript,
-  ulb,
-  selftaught,
-  fortytwo,
-  cub3d,
-  correctionWebsite,
-};
+export * from "./skills";
+export * from "./services";
+export * from "./projects";

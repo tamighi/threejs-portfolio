@@ -1,6 +1,9 @@
 import { motion } from "framer-motion";
+
+import { about } from "@/assets/shared";
+import { services } from "@/assets";
+
 import { fadeIn } from "../../utils/motion";
-import { introduction, services } from "../../constants";
 import { ServiceCard } from "./ServiceCard";
 import { SectionHeader, SectionWrapper } from "..";
 
@@ -12,7 +15,7 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className="mt-4 text-secondary text-[17px] max-w-5xl leading-[30px] whitespace-break-spaces"
       >
-        {introduction}
+        {about}
       </motion.p>
       <div className="mt-20 flex flex-wrap gap-10">
         {services.map((service, index) => {
